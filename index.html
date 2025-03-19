@@ -2,118 +2,256 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abrar Ahmed - Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.25;
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 0 25px;
+            color: #2d2d2d;
         }
-        h1 { font-size: 24px; margin-bottom: 5px; }
-        .contact-info { margin-bottom: 15px; }
-        h2 { 
+
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            margin: 0 0 0.25rem;
+            color: #1a1a1a;
+        }
+
+        .contact-info {
+            margin-bottom: 0.5rem;
+            font-size: 0.95em;
+            color: #4a4a4a;
+        }
+
+        .social-links a {
+            color: #0077b5;
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-size: 0.9em;
+            transition: opacity 0.2s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        h2 {
             color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 3px;
-            margin: 15px 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1.25rem;
+            text-align: center;
+            font-weight: 600;
         }
-        .job-title, .project-title { font-weight: bold; }
-        .company { display: inline-block; }
-        .dates { float: right; }
-        ul { margin: 10px 0 10px 20px; }
-        li { margin-bottom: 5px; }
-        .tools { font-style: italic; margin: 5px 0; }
-        table { width: 100%; margin: 10px 0; }
-        .skills-column { width: 50%; float: left; }
-        .clear { clear: both; }
+
+        .section-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0.5rem 0 0.25rem;
+        }
+
+        .company {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+
+        .dates {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-left: 1rem;
+        }
+
+        ul {
+            margin: 0.5rem 0 1rem 1.5rem;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+            font-size: 0.95em;
+            line-height: 1.4;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: #3498db;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .tools {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 0.75rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .skill-category {
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .skill-category strong {
+            display: block;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Abrar Ahmed</h1>
-    <div class="contact-info">
-        abrarahmedpei@gmail.com | Budapest, Hungary | +36202673343<br>
-        <strong>LinkedIn:</strong> Abrar Ahmed (GitHub); Abrar Ahmed [HackerRank: Abrar Ahmed] (Credly: Abrar Ahmed)
+    <div class="header">
+        <h1>Abrar Ahmed</h1>
+        <div class="contact-info">
+            abrarahmedpei@gmail.com | Budapest, Hungary | +36202673343
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/abrar2030/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/abrar2030" target="_blank">GitHub</a>
+            <a href="https://www.hackerrank.com/profile/abrar2030" target="_blank">HackerRank</a>
+            <a href="https://www.credly.com/users/abrar-ahmed" target="_blank">Credly</a>
+        </div>
     </div>
 
     <h2>EDUCATION</h2>
-    <div class="job-title">BSc Computer Science | Edtvös Loránd University</div>
-    <div class="dates">Sep 2021 – Jan 2025</div>
-    <div class="tools">Coursework: Data Structures and Algorithms, Object-Oriented Programming, Concurrent Programming, Software Engineering, Software Testing, Databases, Operating Systems, Cloud Computing and DevOps, Distributed Systems, Cybersecurity and Network Protocols</div>
+    <div class="section-item">
+        <div class="job-title">BSc Computer Science | Eötvös Loránd University</div>
+        <div class="company">Sep 2021 – Jan 2025</div>
+        <div class="tools">Coursework: Data Structures and Algorithms, Object-Oriented Programming, Concurrent Programming, Software Engineering, Software Testing, Databases, Operating Systems, Cloud Computing and DevOps, Distributed Systems, Cybersecurity and Network Protocols</div>
+    </div>
 
     <h2>EXPERIENCE</h2>
-    <div class="job-title">Software Developer</div>
-    <div class="company">Ericsson</div>
-    <div class="dates">Aug 2023 – Oct 2024</div>
-    <ul>
-        <li>Developed and optimized cloud-based DevOps pipelines and infrastructure in collaboration with cloud architects.</li>
-        <li>Automated cloud deployments using Jenkins, GitHub Actions, and Spinnaker CI/CD pipelines, ensuring speed and reliability.</li>
-        <li>Streamlined DevOps workflows with Python and Bash scripting, improving operational efficiency.</li>
-        <li>Managed infrastructure as code with Terraform for scalable cloud environments.</li>
-        <li>Utilized Docker and Kubernetes for containerization and orchestration, enhancing cloud scalability and efficiency.</li>
-        <li>Monitored and optimized cloud performance using Prometheus and Grafana.</li>
-        <li>Ensured cloud security and compliance by implementing best practices in IAM, network policies, and automated security scans.</li>
-        <li>Improved system reliability by implementing observability best practices with logging, tracing, and alerting.</li>
-        <li>Automated infrastructure provisioning and scaling using Terraform and Kubernetes operators.</li>
-    </ul>
+    <div class="section-item">
+        <div class="job-title">Software Developer</div>
+        <div class="company">Ericsson<span class="dates">Aug 2023 – Oct 2024</span></div>
+        <ul>
+            <li>Automated cloud deployments using Jenkins, GitHub Actions, and Spinnaker CI/CD pipelines</li>
+            <li>Developed and optimized cloud-based DevOps pipelines and infrastructure</li>
+            <li>Managed infrastructure as code with Terraform</li>
+            <li>Monitored and optimized cloud performance using Prometheus/Grafana</li>
+            <li>Streamlined DevOps workflows with Python/Bash scripting</li>
+            <li>Utilized Docker/Kubernetes for containerization and orchestration</li>
+            <li>Ensured cloud security compliance with IAM and network policies</li>
+            <li>Implemented observability best practices (logging, tracing, alerting)</li>
+            <li>Automated infrastructure provisioning with Terraform/K8S operators</li>
+        </ul>
+    </div>
 
-    <div class="job-title">Teaching Assistant</div>
-    <div class="company">Edtvös Loránd University</div>
-    <div class="dates">Feb 2025 – Present</div>
-    <ul>
-        <li>Supported students in Python, Operating Systems, and Algorithms & Data Structures, helping with concepts and debugging.</li>
-        <li>Conducted tutorials, reviewed assignments, facilitated discussions, and consistently assisted instructors with course delivery.</li>
-    </ul>
+    <div class="section-item">
+        <div class="job-title">Teaching Assistant</div>
+        <div class="company">Eötvös Loránd University<span class="dates">Feb 2025 – Present</span></div>
+        <ul>
+            <li>Conducted tutorials and reviewed assignments</li>
+            <li>Supported students in Python, OS, and Algorithms</li>
+            <li>Facilitated discussions and assisted instructors</li>
+        </ul>
+    </div>
 
     <h2>PROJECTS</h2>
-    <div class="project-title">PayNext</div>
-    <div class="tools">Tools: Java, Spring Boot, JavaScript, React, Docker, K8S, PostgreSQL, GitHub Actions, Terraform, Ansible, AWS</div>
-    <ul>
-        <li>Developed a FinTech payment processing application to enhance transaction efficiency and scalability.</li>
-        <li>Built the back end with Java Spring Boot, implementing REST APIs for secure payment processing and data management.</li>
-        <li>Utilized microservices architecture for modularity and scalability, enabling independent service updates.</li>
-        <li>Employed Docker for containerization and Kubernetes for orchestration, ensuring consistent environments and scalability.</li>
-        <li>Integrated PostgreSQL to manage user data, transaction records, and payment history with efficient data retrieval.</li>
-        <li>Automated CI/CD pipelines with GitHub Actions, Terraform, Ansible, and AWS, enhancing deployment and reliability.</li>
-        <li>Developed front-end interfaces with React JavaScript, improving user experience and interface responsiveness.</li>
-    </ul>
+    <div class="section-item">
+        <div class="project-title">PayNext | Tools: Java, Spring Boot, JavaScript, React, Docker, K8S, PostgreSQL, GitHub Actions, Terraform, Ansible, AWS</div>
+        <ul>
+            <li>Developed FinTech payment processing application</li>
+            <li>Implemented REST APIs with Java Spring Boot</li>
+            <li>Utilized microservices architecture for scalability</li>
+            <li>Containerized with Docker/Kubernetes</li>
+            <li>Integrated PostgreSQL for data management</li>
+            <li>Automated CI/CD with GitHub Actions/Terraform</li>
+            <li>Built responsive React frontend</li>
+        </ul>
+    </div>
 
-    <div class="project-title">FinovaBank</div>
-    <div class="tools">Tools: Java, Spring Boot, Docker, K8S, React.js, PostgreSQL, MongoDB, Jenkins, Prometheus, OAuth2</div>
-    <ul>
-        <li>Utilized Docker and Kubernetes for containerization and orchestration, enabling cloud scalability and reliable deployments.</li>
-        <li>Built secure REST APIs with Java Spring Boot to handle account management, transactions, and compliance processes.</li>
-        <li>Designed a responsive frontend using React.js, providing an intuitive, user-friendly digital banking experience.</li>
-        <li>Integrated PostgreSQL and MongoDB for efficient data handling, supporting real-time transaction logging and compliance.</li>
-        <li>Employed RabbitMQ for asynchronous communication and Prometheus/Grafana for real-time monitoring and observability.</li>
-        <li>Streamlined CI/CD pipelines with Jenkins, enhancing development efficiency and ensuring continuous deployment reliability.</li>
-    </ul>
+    <div class="section-item">
+        <div class="project-title">FinovaBank | Tools: Java, Spring Boot, Docker, K8S, React.js, PostgreSQL, MongoDB, Jenkins, Prometheus, OAuth2</div>
+        <ul>
+            <li>Built secure REST APIs for banking operations</li>
+            <li>Designed React.js frontend for banking experience</li>
+            <li>Integrated PostgreSQL/MongoDB databases</li>
+            <li>Implemented Prometheus/Grafana monitoring</li>
+            <li>Streamlined CI/CD with Jenkins</li>
+            <li>Used RabbitMQ for async communication</li>
+        </ul>
+    </div>
 
     <h2>CERTIFICATIONS</h2>
-    <table>
-        <tr><td>- SQL (Advanced) - HackerRank</td><td>Nov 13, 2024</td></tr>
-        <tr><td>- Software Engineer - HackerRank</td><td>Nov 19, 2024</td></tr>
-        <tr><td>- BCSS Cloud Fundamental Level – Ericsson</td><td>Oct 23, 2023</td></tr>
-        <tr><td>- Principles of IBM Cloud Professional Developer – IBM</td><td>Dec 30, 2024</td></tr>
-        <tr><td>- Google Cloud Fundamentals Core Infrastructure – Google</td><td>Dec 23, 2024</td></tr>
-    </table>
+    <div class="section-item">
+        <ul>
+            <li>BCSS Cloud Fundamental Level – Ericsson <span class="dates">Oct 2023</span></li>
+            <li>Google Cloud Fundamentals – Google <span class="dates">Dec 2024</span></li>
+            <li>IBM Cloud Professional Developer – IBM <span class="dates">Dec 2024</span></li>
+            <li>SQL (Advanced) - HackerRank <span class="dates">Nov 2024</span></li>
+            <li>Software Engineer - HackerRank <span class="dates">Nov 2024</span></li>
+        </ul>
+    </div>
 
     <h2>SKILLS</h2>
-    <div class="skills-column">
-        <strong>Programming Languages:</strong> Java, Python, C#, JavaScript, TypeScript<br>
-        <strong>Agile Methodologies:</strong> Jira, Confluence<br>
-        <strong>Frameworks:</strong> Spring Boot 3, JUnit 5, Mockito, Angular, React, .NET<br>
-        <strong>Databases:</strong> Oracle, MySQL, PostgreSQL
+    <div class="skills-grid">
+        <div class="skill-category">
+            <strong>Programming</strong>
+            Java · Python · C# · JavaScript · TypeScript
+        </div>
+        <div class="skill-category">
+            <strong>DevOps</strong>
+            AWS · GCP · Terraform · Docker · Kubernetes · Jenkins
+        </div>
+        <div class="skill-category">
+            <strong>Frameworks</strong>
+            Spring Boot · .NET · React · Angular · JUnit
+        </div>
+        <div class="skill-category">
+            <strong>Databases</strong>
+            PostgreSQL · MySQL · MongoDB · Oracle
+        </div>
+        <div class="skill-category">
+            <strong>Tools</strong>
+            Git · GitHub · Prometheus · Grafana · Postman
+        </div>
+        <div class="skill-category">
+            <strong>Practices</strong>
+            CI/CD · TDD · Agile · Microservices · REST APIs
+        </div>
     </div>
-    <div class="skills-column">
-        <strong>DevOps & Cloud Infrastructure:</strong> AWS, GCP, IBM Cloud, Terraform, Ansible, Docker, Kubernetes, OpenShift, Grafana, Prometheus<br>
-        <strong>CI/CD Pipelines:</strong> Jenkins, GitHub Actions, Spinnaker<br>
-        <strong>Scripting & Automation:</strong> Python, Bash, Shell Scripting, Automation Tools<br>
-        <strong>Testing:</strong> Unit Testing, Integration Testing, Test-Driven Development<br>
-        <strong>API Testing:</strong> Postman<br>
-        <strong>Version Control:</strong> Git, GitHub, Gerrit
-    </div>
-    <div class="clear"></div>
 </body>
 </html>
